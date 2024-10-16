@@ -101,7 +101,7 @@ public final class TestApp {
     }
     @org.junit.jupiter.api.Test
     public void testMakeCheck() throws SQLException, IOException {
-        String page = Files.readString(Paths.get("./src/test/resources/testPage.html"));
+        String page = Files.readString(Paths.get("./src/test/resources/test-page.html"));
         MockResponse mockResponse = new MockResponse().setResponseCode(200).setBody(page);
         mockServer.enqueue(mockResponse);
         String urlString = mockServer.url(NamedRoutes.mainPath()).toString();
